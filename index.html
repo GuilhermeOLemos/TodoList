@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Time</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="shortcut icon" type="imagex/png" href="imgs/smart-time-logo.svg">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- menu lateral -->
+    <nav>
+        <div class="hover-menu-icon" id="open-close-icon">
+            <a id="menu-open-icon"><span class="material-symbols-outlined">menu</span></a>
+            <a id="menu-close-icon"><span class="material-symbols-outlined">close</span></a>
+        </div>
+        <div id="all-options">
+            <div id="options">
+                <a class="hover-link" id="home-icon"><span class="material-symbols-outlined">home</span>
+                    <p class="options-text">inicio</p>
+                </a>
+                <a class="hover-link" id="task-icon"><span class="material-symbols-outlined">task</span>
+                    <p class="options-text">lista de tarefas</p>
+                </a>
+                <a class="hover-link" id="notes-icon"><span class="material-symbols-outlined">notes</span>
+                    <p class="options-text">notas</p>
+                </a>
+                <a class="hover-link" id="schedule-icon"><span class="material-symbols-outlined">schedule</span>
+                    <p class="options-text">temporizador</p>
+                </a>
+            </div>
+            <div id="settings-options">
+                <a class="hover-link" id="lightmode-icon"><span class="material-symbols-outlined">light_mode</span>
+                    <p class="options-text">modo claro</p>
+                </a>
+                <a class="hover-link" id="darkmode-icon"><span class="material-symbols-outlined">dark_mode</span>
+                    <p class="options-text">modo escuro</p>
+                </a>
+                <a class="hover-link" id="settings-icon"><span class="material-symbols-outlined">settings</span>
+                    <p class="options-text">configurações</p>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <!-- janela dinâmica -->
+    <main>
+        <div id="logo"></div>
+        <!-- to-do list -->
+        <section>
+            <div class="container" id="task">
+                <header>
+                    <h1>Lista de tarefas</h1>
+                </header>
+                <!-- adicionar tarefa -->
+                <form id="todo-form">
+                    <h3>adicione a sua tarefa:</h3>
+                    <div class="form-control">
+                        <input type="text" id="todo-input" placeholder="O que você vai fazer?">
+                        <button type="submit">
+                            <span class="material-symbols-outlined">
+                                add_circle
+                            </span>
+                        </button>
+                    </div>
+                </form>
+                <!-- editar tarefa -->
+                <form class="hide" id="edit-form">
+                    <h3>edite a sua tarefa:</h3>
+                    <div class="form-control">
+                        <input type="text" id="edit-input">
+                        <button type="submit">
+                            <span class="material-symbols-outlined">
+                                check_circle
+                            </span>
+                        </button>
+                        <button id="cancel-edit-btn">
+                        <span class="material-symbols-outlined">
+                                cancel
+                            </span>
+                    </div>
+                    </button>
+                </form>
+                <!-- pesquisar -->
+                <!-- <div id="toolbar">
+                    <div id="search">
+                        <h3>pesquisar:</h3>
+                        <form>
+                            <input type="text" id="search-input" placeholder="buscar">
+                            <button id="erase-button">
+                                <span class="material-symbols-outlined">
+                                    backspace
+                                </span>
+                            </button>
+                        </form>
+                    </div> -->
+                    <!-- filtrar -->
+                    <!-- <div id="filter">
+                        <h3>filtrar:</h3>
+                        <select id="filter-select">
+                            <option class="select-options" value="default" disabled>selecione quais tarefas deseja exibir</option>
+                            <option class="select-options" value="all">todas</option>
+                            <option class="select-options" value="done">completas</option>
+                            <option class="select-options" value="todo">incompletas</option>
+                        </select>
+                    </div>
+                </div> -->
+                <!-- lista de tarefas -->
+                <div id="todo-list">
+                    <!-- template temporário -->
+                    <div class="todo">
+                        <h4>estou fazendo alguma coisa...</h4>
+                        <button class="finish-todo">
+                            <span class="material-symbols-outlined">
+                                done
+                            </span>
+                        </button>
+                        <button class="edit-todo">
+                            <span class="material-symbols-outlined">
+                                edit
+                            </span>
+                        </button>
+                        <button class="remove-todo">
+                            <span class="material-symbols-outlined">
+                                delete
+                            </span>
+                        </button>
+                    </div>
+                    <!-- template temporário -->
+                    <div class="todo">
+                        <h4>estudar javascript</h4>
+                        <button class="finish-todo">
+                            <span class="material-symbols-outlined">
+                                done
+                            </span>
+                        </button>
+                        <button class="edit-todo">
+                            <span class="material-symbols-outlined">
+                                edit
+                            </span>
+                        </button>
+                        <button class="remove-todo">
+                            <span class="material-symbols-outlined">
+                                delete
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- notes -->
+        <section>
+            <div class="container" id="notes">
+                <h1>Notas</h1>
+            </div>
+
+        </section>
+
+        <!-- timer -->
+        <section>
+            <div class="container" id="schedule">
+                <h1>Timer</h1>
+            </div>
+
+        </section>
+
+        <!-- configurações -->
+        <section>
+            <div class="container" id="settings">
+                <h1>configurações</h1>
+                <div class="content">
+                    <label for="color-change">cor de fundo<input type="color" id="color-change"></label>
+                </div>
+                <p id="copyright">&copy; 2023 Smart Time. Todos os direitos</p>
+            </div>
+        </section>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
