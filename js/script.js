@@ -80,34 +80,34 @@ window.addEventListener('load', function () {
 
 // ----------------------------------------------------------------------------------------------------- //
 // //* retornando a tela inicial
-// $('#home-icon').addEventListener('click', (() => {
-//     console.log('home')
-//     hide()
-// }))
+$('#home-icon').addEventListener('click', (() => {
+    console.log('home')
+    hide()
+}))
 
 // //* exibindo lista de tarefas
-// $('#task-icon').addEventListener('click', (() => {
-//     console.log('task')
-//     show('task')
-// }))
+$('#task-icon').addEventListener('click', (() => {
+    console.log('task')
+    show('task')
+}))
 
 // //* exibindo anotações
-// $('#notes-icon').addEventListener('click', (() => {
-//     console.log('notes')
-//     show('notes')
-// }))
+$('#notes-icon').addEventListener('click', (() => {
+    console.log('notes')
+    show('notes')
+}))
 
 // //* exibindo temporizador
-// $('#schedule-icon').addEventListener('click', (() => {
-//     console.log('schedule')
-//     show('schedule')
-// }))
+$('#schedule-icon').addEventListener('click', (() => {
+    console.log('schedule')
+    show('schedule')
+}))
 
 // //* exibindo configurações
-// $('#settings-icon').addEventListener('click', (() => {
-//     console.log('settings')
-//     show('settings')
-// }))
+$('#settings-icon').addEventListener('click', (() => {
+    console.log('settings')
+    show('settings')
+}))
 // ----------------------------------------------------------------------------------------------------- //
 
 // ----------------------------------------------------------------------------------------------------- //
@@ -331,15 +331,6 @@ editForm.addEventListener('submit', (e) => {
 
 // ----------------------------------------------------------------------------------------------------- //
 
-// ----------------------------------------------------------------------------------------------------- //
-
-
-
-
-
-
-
-// ----------------------------------------------------------------------------------------------------- //
 
 // ----------------------------------------------------------------------------------------------------- //
 // notes
