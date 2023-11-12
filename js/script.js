@@ -63,12 +63,12 @@ function show(name) {
 
 
 //* ocultando todas as telas
-// function hide() {
-//     for (i = 0; i < divs.length; i++) {
-//         divs[i].style.translate = '0 100vh'
-//         divs[i].style.scale = '0.01'
-//     }
-// }
+function hide() {
+    for (i = 0; i < divs.length; i++) {
+        divs[i].style.translate = '0 100vh'
+        divs[i].style.scale = '0.01'
+    }
+}
 
 window.addEventListener('load', function () {
     $('#lightmode-icon').style.display = 'none'
