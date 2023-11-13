@@ -190,6 +190,7 @@ section {
     display: flex;
     justify-content: center;
     padding: 4rem;
+    position: fixed;
 
     /* user-select: none;
     -webkit-user-drag: none; */

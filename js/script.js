@@ -45,8 +45,6 @@ function closeMenu() {
 $('#menu-close-icon').addEventListener('click', closeMenu)
 $('nav').addEventListener('mouseout', closeMenu)
 // ----------------------------------------------------------------------------------------------------- //
-
-// ----------------------------------------------------------------------------------------------------- //
 //* exibindo telas
 function show(name) {
     for (i = 0; i < divs.length; i++) {
@@ -74,42 +72,51 @@ window.addEventListener('load', function () {
     $('#lightmode-icon').style.display = 'none'
     document.body.style.background = 'var(--lmcolor-bg)'
     $('#logo').style.filter = 'brightness(0.2)'
-    // hide()
+    hide()
 })
 // ----------------------------------------------------------------------------------------------------- //
+//* retornando telas
+var clicked = false
+function toggleScreens(screen) {
+    if (!clicked) {
+        show(screen)
+        clicked = true
+    } else {
+        hide(screen)
+        clicked = false
+    }
+}
 
-// ----------------------------------------------------------------------------------------------------- //
-// //* retornando a tela inicial
+//* retornando a tela inicial
 $('#home-icon').addEventListener('click', (() => {
-    console.log('home')
     hide()
+    clicked = false
 }))
 
-// //* exibindo lista de tarefas
+//* exibindo lista de tarefas
 $('#task-icon').addEventListener('click', (() => {
-    console.log('task')
-    show('task')
+    toggleScreens('task')
+    clicked = false
 }))
 
-// //* exibindo anotações
+//* exibindo anotações
 $('#notes-icon').addEventListener('click', (() => {
-    console.log('notes')
-    show('notes')
+    toggleScreens('notes')
+    clicked = false
 }))
 
-// //* exibindo temporizador
+//* exibindo temporizador
 $('#schedule-icon').addEventListener('click', (() => {
-    console.log('schedule')
-    show('schedule')
+    toggleScreens('schedule')
+    clicked = false
+    // show('schedule')
 }))
 
-// //* exibindo configurações
+//* exibindo configurações
 $('#settings-icon').addEventListener('click', (() => {
-    console.log('settings')
-    show('settings')
+    toggleScreens('settings')
+    clicked = false
 }))
-// ----------------------------------------------------------------------------------------------------- //
-
 // ----------------------------------------------------------------------------------------------------- //
 // task 
 // seleção de elementos
@@ -253,7 +260,7 @@ document.addEventListener('click', function (e) {
 //             }
 //         }
 //     }
-    
+
 //     if (select.value === 'todo') {
 //         for (i = 0; i < todo.length; i++){
 //             if (todo[i].classList.contains('done')){
@@ -263,12 +270,6 @@ document.addEventListener('click', function (e) {
 //     }
 
 // })
-
-
-// ----------------------------------------------------------------------------------------------------- //
-
-
-// ----------------------------------------------------------------------------------------------------- //
 
 //! testes xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx //
 
@@ -330,22 +331,15 @@ editForm.addEventListener('submit', (e) => {
 })
 
 // ----------------------------------------------------------------------------------------------------- //
-
-
-// ----------------------------------------------------------------------------------------------------- //
 // notes
 
 
 
 
 // ----------------------------------------------------------------------------------------------------- //
-
-// ----------------------------------------------------------------------------------------------------- //
 // schedule
 
 
-
-// ----------------------------------------------------------------------------------------------------- //
 
 // ----------------------------------------------------------------------------------------------------- //
 //? refazer
@@ -364,8 +358,6 @@ $('#lightmode-icon').addEventListener('click', (() => {
     $('#lightmode-icon').style.display = 'none'
     $('#logo').style.filter = 'brightness(0.2)'
 }))
-
-// ----------------------------------------------------------------------------------------------------- //
 
 // ----------------------------------------------------------------------------------------------------- //
 // settings
