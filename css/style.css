@@ -188,9 +188,10 @@ section {
     /* height: 100vh; */
 
     display: flex;
+    /* display: none; */
     justify-content: center;
     padding: 4rem;
-    position: fixed;
+    /* position: fixed; */ /*! impossibilita o clique dos botões*/
 
     /* user-select: none;
     -webkit-user-drag: none; */

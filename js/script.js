@@ -49,6 +49,7 @@ $('nav').addEventListener('mouseout', closeMenu)
 function show(name) {
     for (i = 0; i < divs.length; i++) {
         if (name === divs[i].id) {
+            // divs[i].style.display = 'flex'
             divs[i].style.translate = '0 0'
             divs[i].style.scale = '1'
         }
