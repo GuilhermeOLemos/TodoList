@@ -68,6 +68,7 @@ function hide() {
     }
 }
 
+//* ocultando telas ao carregar a página
 window.addEventListener('load', function () {
     $('#lightmode-icon').style.display = 'none'
     document.body.style.background = 'var(--lmcolor-bg)'
@@ -109,7 +110,6 @@ $('#notes-icon').addEventListener('click', (() => {
 $('#schedule-icon').addEventListener('click', (() => {
     toggleScreens('schedule')
     clicked = false
-    // show('schedule')
 }))
 
 //* exibindo configurações
