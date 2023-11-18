@@ -52,6 +52,7 @@ function show(name) {
             // divs[i].style.display = 'flex'
             divs[i].style.translate = '0 0'
             divs[i].style.scale = '1'
+            divs[i].style.display = 'flex'
         }
         if (name !== divs[i].id) {
             divs[i].style.translate = '0 100vh'
@@ -66,6 +67,7 @@ function hide() {
     for (i = 0; i < divs.length; i++) {
         divs[i].style.translate = '0 100vh'
         divs[i].style.scale = '0.01'
+        divs[i].style.display = 'none'
     }
 }
 
@@ -98,25 +100,21 @@ $('#home-icon').addEventListener('click', (() => {
 //* exibindo lista de tarefas
 $('#task-icon').addEventListener('click', (() => {
     toggleScreens('task')
-    clicked = false
 }))
 
 //* exibindo anotações
 $('#notes-icon').addEventListener('click', (() => {
     toggleScreens('notes')
-    clicked = false
 }))
 
 //* exibindo temporizador
 $('#schedule-icon').addEventListener('click', (() => {
     toggleScreens('schedule')
-    clicked = false
 }))
 
 //* exibindo configurações
 $('#settings-icon').addEventListener('click', (() => {
     toggleScreens('settings')
-    clicked = false
 }))
 // ----------------------------------------------------------------------------------------------------- //
 // task 
