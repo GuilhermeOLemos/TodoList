@@ -1,4 +1,4 @@
-@import url(/css/responsive.css);
+/* @import url(/css/responsive.css); */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;900&display=swap');
 
 :root {
@@ -37,7 +37,7 @@
 
 }
 
-input[type = color] {
+input[type=color] {
     min-width: 2rem;
     max-width: 2rem;
 
@@ -191,7 +191,8 @@ section {
     /* display: none; */
     justify-content: center;
     padding: 4rem;
-    /* position: fixed; */ /*! impossibilita o clique dos botões*/
+    /* position: fixed; */
+    /*! impossibilita o clique dos botões*/
 
     /* user-select: none;
     -webkit-user-drag: none; */
@@ -208,7 +209,7 @@ h1 {
 
     text-transform: uppercase;
     text-align: center;
-    
+
     border-bottom: 1px solid;
 
     user-select: none;
@@ -222,7 +223,7 @@ h3 {
     font-weight: 500;
 }
 
-h3::first-letter{
+h3::first-letter {
     text-transform: uppercase;
 }
 
@@ -232,7 +233,7 @@ h4 {
 
 }
 
-#toolbar{
+#toolbar {
     margin: 1rem 0;
     padding: 1rem 0 .4rem 0;
     border-top: 1px solid var(--color-glass);
@@ -257,7 +258,7 @@ select {
 
 }
 
-select{
+select {
     font-weight: 300;
 }
 
@@ -281,7 +282,7 @@ button {
     transition: .3s;
 }
 
-button span{
+button span {
     pointer-events: none;
 }
 
@@ -303,8 +304,8 @@ div+div {
     margin: .5rem 0;
 }
 
-#todo-form{
-    margin:  0 0 .5rem 0;
+#todo-form {
+    margin: 0 0 .5rem 0;
 }
 
 
@@ -314,21 +315,21 @@ div+div {
     background: var(--color-borderglass);
     border-radius: 5px;
     border: 1px solid var(--color-glass);
-    
+
     transition: ease-in-out .3s;
-    
+
 }
 
-.todo button{
+.todo button {
     border: none;
 }
 
-.done{
+.done {
     color: var(--txt-todo);
     background: var(--bg-todo);
 }
 
-.done h4{
+.done h4 {
     text-decoration: line-through;
 }
 
@@ -347,16 +348,19 @@ div+div {
     transition: ease-in-out .3s;
 }
 
-.todo:hover{
+.todo:hover {
     box-shadow: 0 0 5px var(--color-shadow);
 }
 
-.remove-todo:hover,#cancel-edit-btn:hover,#erase-button:hover{
+.remove-todo:hover,
+#cancel-edit-btn:hover,
+#erase-button:hover {
     color: #8a0101
 }
 
-input:hover,select:hover {
-    border-color:var(--color-offwhite);
+input:hover,
+select:hover {
+    border-color: var(--color-offwhite);
     box-shadow: 0 0 5px var(--color-shadow);
 }
 
@@ -370,7 +374,7 @@ input:hover,select:hover {
     color: var(--dmcolor-h1);
 }
 
-.hover-link:hover{
+.hover-link:hover {
     color: var(--dmcolor-text-hover);
     background: var(--dmcolor-btn-hover);
 }
@@ -414,14 +418,66 @@ button:hover {
 
 /* screens */
 /** notes */
-.note {
+#note-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+#add-note {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#btn-add-note {
+    font-variation-settings:
+        'FILL' 1,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48;
+    color: var(--dmcolor-h2);
+
+    transition: ease-in-out .3s;
+}
+
+#btn-add-note:hover {
+    color: var(--dmcolor-text);
+
+    scale: 1.2;
+}
+
+.note,
+#add-note {
     min-width: 10em;
     width: 30%;
+    height: 10em;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+}
+
+.note {
+    background: rgb(239, 231, 211);
+}
+
+textarea {
+    width: 100%;
+    height: 9em;
+    resize: none;
 
     padding: .3rem .8rem;
 
-    background: rgb(239, 231, 211);
-    border-radius: 10px;
+    background: transparent;
+    border: none;
+}
+
+.note h2 {
+    display: flex;
+    justify-content: space-between;
+
+    padding: .3rem .8rem;
 }
 
 

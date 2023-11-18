@@ -333,6 +333,27 @@ editForm.addEventListener('submit', (e) => {
 
 // ----------------------------------------------------------------------------------------------------- //
 // notes
+const textarea = document.querySelectorAll('textarea')
+const btnExpand = document.querySelectorAll('.btn-expand')
+
+
+window.addEventListener('load',(()=>{
+    console.log(textarea.length)
+    for (i = 0; i < textarea.length; i++) {
+        textarea[i].getAttribute('disabled')
+    }
+}))
+
+// btnExpand.addEventListener('click', function moreOrLess(elem) {
+//     const targetEl = elem.target
+
+//     //elemento pai
+//     const parentEl = targetEl.closest('div')
+
+//     targetEl.style.display = 'none'
+//     parentEl.style.display = 'none'
+// })
+
 
 
 
