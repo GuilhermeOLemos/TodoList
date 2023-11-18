@@ -388,8 +388,6 @@ button:hover {
     flex-direction: column;
     padding: 1.5rem;
 
-    position: fixed;
-
     background: var(--color-glass);
     backdrop-filter: blur(100px);
 
@@ -415,18 +413,17 @@ button:hover {
 
 
 /* screens */
-/** task */
-/* #task {
-} */
-
-
-
-
-
-
 /** notes */
-/* #notes {
-} */
+.note {
+    min-width: 10em;
+    width: 30%;
+
+    padding: .3rem .8rem;
+
+    background: rgb(239, 231, 211);
+    border-radius: 10px;
+}
+
 
 
 /** schedule */

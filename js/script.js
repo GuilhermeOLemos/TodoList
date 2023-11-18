@@ -49,10 +49,9 @@ $('nav').addEventListener('mouseout', closeMenu)
 function show(name) {
     for (i = 0; i < divs.length; i++) {
         if (name === divs[i].id) {
-            // divs[i].style.display = 'flex'
             divs[i].style.translate = '0 0'
             divs[i].style.scale = '1'
-            divs[i].style.display = 'flex'
+            divs[i].style.display = 'block'
         }
         if (name !== divs[i].id) {
             divs[i].style.translate = '0 100vh'
@@ -93,28 +92,32 @@ function toggleScreens(screen) {
 
 //* retornando a tela inicial
 $('#home-icon').addEventListener('click', (() => {
-    hide()
+    toggleScreens()
     clicked = false
 }))
 
 //* exibindo lista de tarefas
 $('#task-icon').addEventListener('click', (() => {
     toggleScreens('task')
+    clicked = false
 }))
 
 //* exibindo anotações
 $('#notes-icon').addEventListener('click', (() => {
     toggleScreens('notes')
+    clicked = false
 }))
 
 //* exibindo temporizador
 $('#schedule-icon').addEventListener('click', (() => {
     toggleScreens('schedule')
+    clicked = false
 }))
 
 //* exibindo configurações
 $('#settings-icon').addEventListener('click', (() => {
     toggleScreens('settings')
+    clicked = false
 }))
 // ----------------------------------------------------------------------------------------------------- //
 // task 
@@ -125,7 +128,6 @@ const todoList = document.querySelector('#todo-list')
 const editForm = document.querySelector('#edit-form')
 const editInput = document.querySelector('#edit-input')
 const cancelEditBtn = document.querySelector('#cancel-edit-btn')
-
 
 let oldInputValue
 
